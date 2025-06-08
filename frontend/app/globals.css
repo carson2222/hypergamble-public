@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 120 50% 98%;
+  --foreground: 120 10% 10%;
+  --card: 120 50% 95%;
+  --card-foreground: 120 10% 10%;
+  --popover: 120 50% 98%;
+  --popover-foreground: 120 10% 10%;
+  --primary: 120 100% 25%;
+  --primary-foreground: 120 10% 98%;
+  --secondary: 120 30% 85%;
+  --secondary-foreground: 120 10% 10%;
+  --muted: 120 30% 90%;
+  --muted-foreground: 120 10% 40%;
+  --accent: 120 30% 85%;
+  --accent-foreground: 120 10% 10%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 120 10% 98%;
+  --border: 120 20% 85%;
+  --input: 120 20% 85%;
+  --ring: 120 100% 25%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --background: 120 50% 5%;
+  --foreground: 120 10% 98%;
+  --card: 120 50% 8%;
+  --card-foreground: 120 10% 98%;
+  --popover: 120 50% 5%;
+  --popover-foreground: 120 10% 98%;
+  --primary: 120 100% 60%;
+  --primary-foreground: 120 10% 5%;
+  --secondary: 120 30% 20%;
+  --secondary-foreground: 120 10% 98%;
+  --muted: 120 30% 15%;
+  --muted-foreground: 120 10% 70%;
+  --accent: 120 30% 20%;
+  --accent-foreground: 120 10% 98%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 120 10% 98%;
+  --border: 120 20% 20%;
+  --input: 120 20% 20%;
+  --ring: 120 100% 60%;
+}
+
+@keyframes shineGreen {
+  0% {
+    background-color: inherit; /* Keeps the current color */
+  }
+  50% {
+    background-color: #5fe8b18d; /* Changes to green */
+  }
+  100% {
+    background-color: inherit; /* Returns to the original color */
+  }
+}
+
+.shine-green {
+  animation: shineGreen 0.5s ease-in-out; /* Adjust duration as needed */
+}

@@ -1,0 +1,35 @@
+services:
+  app:
+    build: .
+    volumes:
+      - .:/usr/src/app # Mount the local directory
+      - /usr/src/app/node_modules # Ensure node_modules is not overwritten
+    ports:
+      - "5000:5000"
+    command: npm run start # Run the dev script with ts-node-dev
+    environment:
+      NODE_ENV: development
+      CHOKIDAR_USEPOLLING: "true"
+      CHOKIDAR_INTERVAL: "500" # Optional
+    depends_on:
+      - db
+    restart: always # Ensure the app restarts if it fails
+
+  db:
+    image: postgres:15
+    ports:
+      - "5432:5432" # Expose port 5432 for PostgreSQL
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: u1RlKgaNRjp0vUCWk9R8blmK2
+      POSTGRES_DB: mydb
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    ports:
+      - "8080:8080"
+
+volumes:
+  db_data:
