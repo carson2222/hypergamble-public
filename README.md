@@ -3,6 +3,7 @@
 > **Note**: This project was originally developed as a commissioned work for a client who has graciously permitted its publication as part of my portfolio. The codebase has been sanitized and made public for educational and demonstration purposes.
 
 HyperGamble is a full-stack web application that provides a modern and secure gambling platform integrated with the HyperLiquid protocol. The project consists of a Next.js frontend and a Node.js/Express backend, both written in TypeScript.
+
 🎞️ [Demo showcase](https://youtu.be/AX_wLR3aTw0)
 ## 🌟 Features
 
